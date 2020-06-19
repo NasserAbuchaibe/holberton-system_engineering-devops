@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
 # but for the 9th iteration, displays Holberton School and then Hi on a new line.
-for ((c=1; c<=10; c++))
-do
+cont=0
+while [ $cont -lt 10 ]; do
     echo "Holberton School"
-    if [ "$c" -eq 9 ]; then
+    if [ "$cont" -eq 8 ]; then
         echo "Hi"
     fi
+    let cont=cont+1
 done
