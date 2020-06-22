@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-ps auxf | grep bash
+# Bash script that displays lines
+ps aux | grep bash
 # shellcheck disable=SC2009
