@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# 9. Process and PID file
+echo $BASHPID > /var/run/holbertonscript.pid
+function kill_1 {
+	echo "I hate the kill command"
+	sudo rm -R /var/run/holbertonscript.pid
+	exit
+}
+
+function love {
+	echo "Y U no love me?!"
+	exit
+}
+
+function kill_2 {
+	sudo rm -R /var/run/holbertonscript.pid
+	exit
+}
+
+trap kill_1 SIGTERM 
+trap love SIGINT
+trap kill_2 SIGQUIT
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
