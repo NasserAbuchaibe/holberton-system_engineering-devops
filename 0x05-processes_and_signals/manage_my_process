@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#10. Manage my process -advanced
+while true
+do
+    echo "I am alive!" >> /tmp/my_process
+    sleep 2
+done
