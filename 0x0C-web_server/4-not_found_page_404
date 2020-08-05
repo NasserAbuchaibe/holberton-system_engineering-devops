@@ -14,7 +14,7 @@ sed -i "0,/server {/s//$text/" "$config"
 
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
 
-text="server {\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html\/;\n\t\tinternal;\n\t}"
-sed -i "0,/server {/s//$text/" "$config"
+text1="server {\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html\/;\n\t\tinternal;\n\t}"
+sed -i "0,/server {/s//$text1/" "$config"
 
 sudo service nginx restart
