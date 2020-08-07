@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# After connecting to the container and fixing whatever needed to be fixe
+
+sudo service apache2 restart
