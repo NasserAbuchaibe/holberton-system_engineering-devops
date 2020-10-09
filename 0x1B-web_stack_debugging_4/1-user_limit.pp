@@ -1,11 +1,11 @@
-# Change the OS configuration so that it is possible to 
-# login with the holberton user and open a file without any error message.
- 
+# Change the OS configuration so that it is possible to login with
+# the holberton user and open a file without any error message.
+
 exec { 'hard limit':
   path    => ['/bin'],
   command => 'sed -i "s/holberton hard nofile 5/holberton hard nofile 1024/" /etc/security/limits.conf',
 }
- 
+
 exec { 'soft limit':
   path    => ['/bin'],
   command => 'sed -i "s/holberton soft nofile 4/holberton soft nofile 1024/" /etc/security/limits.conf',
